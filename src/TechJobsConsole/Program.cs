@@ -120,15 +120,18 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
+            List<Dictionary<string, string>> sortedJobs = someJobs.OrderBy(d => d["name"]).ToList();
+
             if (someJobs.Count > 0)
             {
-                foreach (Dictionary<string, string> job in someJobs)
+                foreach (Dictionary<string, string> job in sortedJobs)
                 {
+                    Console.WriteLine("*****");
                     foreach (KeyValuePair<string, string> opportunity in job)
                     {
                         Console.WriteLine(opportunity.Key + ": " + opportunity.Value);
                     }
-                    Console.WriteLine("*****");
+                    Console.WriteLine("*****\n");
                 }
             }
             else
