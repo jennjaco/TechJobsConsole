@@ -63,8 +63,8 @@ namespace TechJobsConsole
             LoadData();
 
             List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
-            
-            
+
+
             foreach (Dictionary<string, string> row in AllJobs)
             {
                 foreach (string aValue in row.Values)
@@ -74,7 +74,7 @@ namespace TechJobsConsole
                         jobs.Add(row);
                         break;
                     }
-    
+
                 }
             }
             return jobs;
@@ -162,3 +162,5 @@ namespace TechJobsConsole
         }
     }
 }
+
+

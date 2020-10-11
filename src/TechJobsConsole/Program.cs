@@ -42,6 +42,7 @@ namespace TechJobsConsole
                     else
                     {
                         List<string> results = JobData.FindAll(columnChoice);
+                        results.Sort();
 
                         Console.WriteLine("\n*** All " + columnChoices[columnChoice] + " Values ***");
                         foreach (string item in results)
@@ -137,7 +138,7 @@ namespace TechJobsConsole
             else
             {
                 Console.WriteLine("No results found.");
-            }  
+            }
         }
     }
 }
